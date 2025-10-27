@@ -4,12 +4,11 @@ import java.util.HashMap;
 
 public class PayloadFactory {
 
-    //Need to figure out how to extract payloads from excel. Might not need this class.
     public static HashMap<String, Object> createUserPayload() {
         HashMap<String, Object> payload = new HashMap<>();
-        payload.put("name", "Updated Da shoowop wit PUT");
-        payload.put("gender", "female");
-        payload.put("email", "CleanCode1738@gmail.com");
+        payload.put("name", "Joey Roberts Modifications");
+        payload.put("gender", "male");
+        payload.put("email", "CleanCode1745@gmail.com");
         payload.put("status", "active");
         return payload;
     }
