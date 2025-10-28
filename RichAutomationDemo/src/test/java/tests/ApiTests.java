@@ -31,7 +31,7 @@ public class ApiTests extends ApiBaseTest {
     @Test
     public void testGetUserReturns200() {
         test = TestLogger.startTest("Sending GET request and verifying 200 response", extent, logger);
-        response = requestSpec.get("/public/v2/users/8212415");
+        response = requestSpec.get("/public/v2/users/8213085");
         ApiResponseHandler.handleResponse(response, test, logger);
     }
 

@@ -3,6 +3,7 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 /generated-sources/
+secrets.properties
 
 ### IntelliJ IDEA ###
 /.idea/
