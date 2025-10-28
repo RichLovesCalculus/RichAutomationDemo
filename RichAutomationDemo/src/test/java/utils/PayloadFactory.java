@@ -6,9 +6,9 @@ public class PayloadFactory {
 
     public static HashMap<String, Object> createUserPayload() {
         HashMap<String, Object> payload = new HashMap<>();
-        payload.put("name", "Joey Roberts Modifications");
+        payload.put("name", "Joey Roberts Mod");
         payload.put("gender", "male");
-        payload.put("email", "CleanCode1745@gmail.com");
+        payload.put("email", "CleanCode1746@gmail.com");
         payload.put("status", "active");
         return payload;
     }
