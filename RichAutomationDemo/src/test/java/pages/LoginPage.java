@@ -48,15 +48,10 @@ public class LoginPage {
         submitButton.click();
     }
 
-    public void loginToProductsPageViaActions(String email, String password) {
+    public void loginToProductsPage(String email, String password) {
         enterEmail(email);
         enterPassword(password);
         clickSubmitButtonViaActions();
-    }
-
-    public void loginToProductsPageViaJS(String email, String password) {
-        enterEmail(email);
-        enterPassword(password);
-        clickSubmitButtonViaJS();
+        //clickSubmitButtonViaJS();
     }
 }

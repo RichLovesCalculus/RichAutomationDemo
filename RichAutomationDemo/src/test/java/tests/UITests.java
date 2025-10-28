@@ -15,8 +15,7 @@ public class UITests extends UIBaseTest {
 
     @Test
     public void basicLogIn() throws InterruptedException {
-//        loginPage.loginToProductsPageViaActions("test@qabrains.com", "Password123");
-        loginPage.loginToProductsPageViaJS("test@qabrains.com", "Password123");
+        loginPage.loginToProductsPage("test@qabrains.com", "Password123");
         Thread.sleep(1000);
     }
 }
