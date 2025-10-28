@@ -10,7 +10,7 @@ public class ExtentManager {
 
     public static ExtentReports getInstance() {
         if (extent == null) {
-            ExtentSparkReporter spark = new ExtentSparkReporter("test-output/ExtentReport.html");
+            ExtentSparkReporter spark = new ExtentSparkReporter("reports/ExtentReport.html");
             extent = new ExtentReports();
             extent.attachReporter(spark);
             extent.setSystemInfo("Tester", "Richard Rosario");
