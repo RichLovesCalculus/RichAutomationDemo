@@ -3,6 +3,7 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 /generated-sources/
+sandbox/
 secrets.properties
 
 ### IntelliJ IDEA ###
@@ -41,3 +42,4 @@ logs/
 
 ### Ignore TestNG and ExtentReports output ###
 test-output/
+reports/

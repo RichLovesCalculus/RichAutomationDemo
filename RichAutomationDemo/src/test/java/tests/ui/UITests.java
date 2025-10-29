@@ -1,4 +1,4 @@
-package tests;
+package tests.ui;
 
 import base.UIBaseTest;
 import org.testng.annotations.BeforeMethod;

@@ -1,4 +1,4 @@
-package tests;
+package tests.api;
 
 import base.ApiBaseTest;
 import org.apache.logging.log4j.LogManager;
