@@ -7,22 +7,20 @@ import io.restassured.http.ContentType;
 import org.testng.annotations.Test;
 import utils.ApiResponseHandler;
 import utils.TestLogger;
-import utils.TestPayloadFactory;
-
-import java.util.HashMap;
+import utils.PayloadFactory;
 import java.util.List;
 import java.util.Map;
 
 public class ApiTests extends ApiBaseTest {
 
     private static final Logger logger = LogManager.getLogger(ApiTests.class);
-    private static HashMap<String, Object> payLoad;
+    private static final String dataSource = "src/test/resources/test_data_for_POST.xlsx";
 
     @Test
     public void testPostUserReturns201() throws Exception {
         test = TestLogger.startTest("Sending POST request and verifying 201 response", extent, logger);
-        List<Map<String, String>> spread = TestPayloadFactory.getPayloadsFromExcel("src/test/resources/test_data_for_POST.xlsx");
-        Map<String, Object> payLoad = TestPayloadFactory.buildPayload(spread.get(2));
+        List<Map<String, String>> spread = PayloadFactory.getPayloadsFromExcel(dataSource);
+        Map<String, Object> payLoad = PayloadFactory.buildPayload(spread.get(4));
         logger.info("POST request payload: {}", payLoad);
         response = requestSpec
                 .contentType(ContentType.JSON)
@@ -41,11 +39,10 @@ public class ApiTests extends ApiBaseTest {
     @Test
     public void testPutUserReturns200() {
         test = TestLogger.startTest("Updating resource and verifying 200 response", extent, logger);
-        //payLoad = PayloadFactory.createUserPayload();
-        logger.info("PUT request payload: {}", payLoad);
+        logger.info("PUT request payload: {}", "");
         response = requestSpec
                     .contentType(ContentType.JSON)
-                    .body(payLoad)
+                    .body("")
                     .put("/public/v2/users/8213095");
         ApiResponseHandler.handleResponse(response, test, logger);
     }
@@ -53,11 +50,10 @@ public class ApiTests extends ApiBaseTest {
     @Test
     public void testPatchUserReturns200() {
         test = TestLogger.startTest("Partially updating resource and verifying 200 response", extent, logger);
-        //payLoad = PayloadFactory.updateField("name", "Gee Roses");
-        logger.info("PATCH request payload: {}", payLoad);
+        logger.info("PATCH request payload: {}", "");
         response = requestSpec
                     .contentType(ContentType.JSON)
-                    .body(payLoad)
+                    .body("")
                     .put("/public/v2/users/8213095");
         ApiResponseHandler.handleResponse(response, test, logger);
     }

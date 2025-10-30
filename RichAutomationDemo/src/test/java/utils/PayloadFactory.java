@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class TestPayloadFactory {
+public class PayloadFactory {
 
     public static List<Map<String, String>> getPayloadsFromExcel(String filePath) throws Exception {
         List<Map<String, String>> data = new ArrayList<>();
