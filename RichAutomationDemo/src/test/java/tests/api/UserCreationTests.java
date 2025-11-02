@@ -17,7 +17,7 @@ public class UserCreationTests extends ApiBaseTest {
     @Test
     public void testPostUserReturns201() throws Exception {
         test = TestLogger.startTest("Sending POST request and verifying 201 response", extent, logger);
-        Map<String, String> payload = PayloadFactory.getPayload(dataSource, 0, 7);
+        Map<String, String> payload = PayloadFactory.getPayload(dataSource, 0, 9);
         logger.info("POST request payload: {}", payload);
         response = requestSpec
                 .contentType(ContentType.JSON)
