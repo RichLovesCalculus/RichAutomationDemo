@@ -12,7 +12,7 @@ import java.util.Map;
 
 public class UserCreationTests extends ApiBaseTest {
     private static final Logger logger = LogManager.getLogger(UserCreationTests.class);
-    private static final String dataSource = "src/test/resources/test_data_for_POST.xlsx";
+    private static final String dataSource = "src/test/resources/test_data.xlsx";
 
     @Test
     public void testPostUserReturns201() throws Exception {
