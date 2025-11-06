@@ -1,10 +1,9 @@
 package utils;
 
 import io.restassured.response.Response;
-import org.h2.util.json.JSONObject;
-
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Map;
 import java.util.Properties;
 
 import static io.restassured.RestAssured.given;
@@ -38,12 +37,12 @@ public class APIClient {
                 .get("/users/");
     }
 
-    public static Response createUser(JSONObject payload) {
+    public static Response createUser(Map<String, String> payload) {
         return given()
                 .baseUri("https://gorest.co.in/public/v2")
                 .auth().oauth2(authToken)
                 .header("Content-Type", "application/json")
-                .body(payload.toString())
+                .body(payload)
                 .when()
                 .post("/users");
     }
