@@ -4,6 +4,7 @@ import base.UIBaseTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.LoginPage;
+import utils.UICredentials;
 
 public class UITests extends UIBaseTest {
     LoginPage loginPage;
@@ -15,7 +16,7 @@ public class UITests extends UIBaseTest {
 
     @Test
     public void basicLogIn() throws InterruptedException {
-        loginPage.loginToProductsPage("test@qabrains.com", "Password123");
-        Thread.sleep(1000);
+        loginPage.loginToProductsPage(UICredentials.getUsername(), UICredentials.getPassword());
+        Thread.sleep(30000);
     }
 }
